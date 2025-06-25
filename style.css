@@ -131,3 +131,21 @@ a:hover {
     height: auto;
     z-index: 10;
 }
+
+#potion {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 200px;
+    height: auto;
+    z-index: 10;
+}
+
+#mimic {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 200px;
+    height: auto;
+    z-index: 10;
+}
