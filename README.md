@@ -102,6 +102,6 @@ Through this challenge, I learned how to:
 
 ---
 
-[Template made by [@idghim](https://github.com/idghim)
+[Template made by [@idghim](https://github.com/idghim)]
 ⭐ *Thanks for checking out this project! Feel free to leave a star if you found it helpful or inspiring.*
 
