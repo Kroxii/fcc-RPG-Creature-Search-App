@@ -1,6 +1,6 @@
 #  ( 🌐 version ) 
 
-🔗 **Live Website**: [RPG Creature Search]()
+🔗 **Live Website**: [RPG Creature Search](https://kroxii.github.io/fcc-RPG-Creature-Search-App/)
 
 > ✨ *In this project, I made some custom modifications to the original instructions to achieve a design that reflects my personal style and preferences.*
 
