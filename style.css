@@ -149,3 +149,37 @@ a:hover {
     height: auto;
     z-index: 10;
 }
+
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column;
+    padding: 10px;
+  }
+  table {
+    font-size: 14px;
+    width: 100%;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px auto;
+    position: static !important;
+    width: 90vw !important;
+  }
+  #creature-image,
+  #soldier,
+  #potion,
+  #mimic {
+    position: static !important;
+    width: 90vw !important;
+    max-width: 100%;
+    height: auto;
+    margin: 10px auto;
+    display: block;
+    z-index: 1;
+  }
+  .top-container, .bottom-container {
+    width: 100%;
+  }
+}
