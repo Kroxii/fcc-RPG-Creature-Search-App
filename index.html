@@ -5,12 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RPG Creature Search APP</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
+    <link rel="shortcut icon" href="favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="favicon/site.webmanifest" />
     <body>
-        <h1>RPG Creature Search APP</h1>
-        <form id="search-form">
-            <input type="text" id="search-input" placeholder="Search for a creature...">
-            <button type="submit">Search</button>
+        <h1>Creature Search App</h1>
+      <div class="container">
+        <form role="search" id="search-form">
+          <label for="search-input">Search for Creature Name or ID:</label>
+          <input type="text" name="creature" id="search-input" required />
+          <button id="search-button">Search</button>
         </form>
-        <div id="results"></div>
-
+        <div class="output">
+          <div class="top-container">
+            <div class="name-and-id">
+              <span id="creature-name"></span>
+              <span id="creature-id"></span>
+              <div class="size">
+                <span id="weight"></span>
+                <span id="height"></span>
+              </div>
+            </div>
+            <div id="types"></div>
+            <div>
+              <div id="special-name"></div>
+              <div id="special-description"></div>
+            </div>
+          </div>
+          <div class="bottom-container">
+            <table>
+                <tr>
+                    <th>Base</th>
+                    <th>Stats</th>
+                </tr>
+                <tr>
+                    <td>HP</td>
+                    <td id="hp"></td>
+                </tr>
+                <tr>
+                    <td>Attack</td>
+                    <td id="attack"></td>
+                </tr>
+                <tr>
+                    <td>Defense</td>
+                    <td id="defense"></td>
+                </tr>
+                <tr>
+                    <td>Special Attack</td>
+                    <td id="special-attack"></td>
+                </tr>
+                <tr>
+                    <td>Special Defense</td>
+                    <td id="special-defense"></td>
+                </tr>
+                <tr>
+                    <td>Speed</td>
+                    <td id="speed"></td>
+                </tr>
+            </table>
+          </div>
+        </div>
+    </div>
+    <img id="creature-image" src="Images/Dragon1.png" alt="Creature Image" />
+    <img id="soldier" src="Images/Erhardt.gif" alt="Soldier Image" />
+</body>
+    <script src="script.js"></script>
 </html>
