@@ -13,7 +13,6 @@ const specialDefense = document.getElementById('special-defense');
 const speed = document.getElementById('speed');
 const searchForm = document.getElementById('search-form');
 const searchInput = document.getElementById('search-input');
-const music = document.getElementById('background-music');
 
 
 // Récupérer l'API de FreeCodeCamp
@@ -48,10 +47,32 @@ const getCreature = async () => {
     resetDisplay();
     alert('Creature not found');
     console.log(`Creature not found: ${err}`);
+    document.dispatchEvent(new Event('creatureNotFound'));
   }
 };
 
+// Activer la recherche avec le bouton "Search"
 searchForm.addEventListener('submit', e => {
   e.preventDefault();
   getCreature();
 });
+
+// Reset la page quand le bouton est cliqué
+    const resetDisplay = () => {
+    document.getElementById('reset-button').addEventListener('click', function() {
+    document.getElementById('search-form').reset();
+    document.getElementById('creature-name').textContent = '';
+    document.getElementById('creature-id').textContent = '';
+    document.getElementById('weight').textContent = '';
+    document.getElementById('height').textContent = '';
+    document.getElementById('types').textContent = '';
+    document.getElementById('special-name').textContent = '';
+    document.getElementById('special-description').textContent = '';
+    document.getElementById('hp').textContent = '';
+    document.getElementById('attack').textContent = '';
+    document.getElementById('defense').textContent = '';
+    document.getElementById('special-attack').textContent = '';
+    document.getElementById('special-defense').textContent = '';
+    document.getElementById('speed').textContent = '';
+});
+    }

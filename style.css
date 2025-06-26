@@ -20,20 +20,10 @@ h1, h2, h3 {
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: 5rem;
+    margin-bottom: 0.5rem;
     border-bottom: 4px double #8c3a1c;
     padding-bottom: 0.5rem;
-}
-
-h2 {
-    font-size: 2rem;
-    border-bottom: 2px solid #8c3a1c;
-}
-
-h3 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-    color: #e0b86d;
 }
 
 .container {
@@ -69,6 +59,17 @@ h3 {
 
 #search-button:hover {
     background-color: #a44724;
+}
+
+#reset-button {
+    padding: 0.5rem 1rem;
+    font-family: 'IM Fell English SC', serif;
+    background-color: #8c3a1c;
+    color: #f0e6d2;
+    border: none;
+    cursor: pointer;
+    margin-left: 1rem;
+    transition: background 0.3s;
 }
 
 .rule-box {
@@ -148,6 +149,136 @@ a:hover {
     width: 200px;
     height: auto;
     z-index: 10;
+}
+
+/* Style pour la top-container */
+.top-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  background: none;
+  border-radius: 12px;
+  padding: 24px 20px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 8px rgba(60, 60, 90, 0.08);
+  gap: 32px;
+}
+
+.top-container .name-and-id {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: #00e1ff;
+}
+
+.top-container .size {
+  font-size: 0.95em;
+  color: #ffffff;
+  margin-top: 4px;
+}
+
+#types {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-left: 16px;
+}
+
+#types span {
+  color: #000000;
+  border-radius: 20px;
+  padding: 4px 10px;
+  font-size: 1.2em;
+  font-weight: 500;
+}
+
+.top-container > div:last-child {
+  min-width: 180px;
+  max-width: 260px;
+}
+
+#special-name {
+  font-weight: bold;
+  color: #00e1ff;
+  margin-bottom: 4px;
+}
+
+#special-description {
+  font-size: 1em;
+  color: #ffffff;
+}
+
+.normal {
+  background-color: #b7b7aa;
+}
+
+.fire {
+  background-color: #ff6f52;
+}
+
+.water {
+  background-color: #42a1ff;
+}
+
+.electric {
+  background-color: #fecc33;
+}
+
+.grass {
+  background-color: #78cc55;
+}
+
+.ice {
+  background-color: #66ccfe;
+}
+
+.fighting {
+  background-color: #d3887e;
+}
+
+.poison {
+  background-color: #c68bb7;
+}
+
+.ground {
+  background-color: #dfba52;
+}
+
+.flying {
+  background-color: #8899ff;
+}
+
+.psychic {
+  background-color: #ff66a3;
+}
+
+.bug {
+  background-color: #aabb23;
+}
+
+.rock {
+  background-color: #baaa66;
+}
+
+.ghost {
+  background-color: #9995d0;
+}
+
+.dragon {
+  background-color: #9e93f1;
+}
+
+.dark {
+  background-color: #b59682;
+}
+
+.steel {
+  background-color: #abaabb;
+}
+
+.fairy {
+  background-color: #ed99ed;
 }
 
 @media (max-width: 600px) {
