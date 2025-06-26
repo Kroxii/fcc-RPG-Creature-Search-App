@@ -15,3 +15,43 @@ const searchForm = document.getElementById('search-form');
 const searchInput = document.getElementById('search-input');
 const music = document.getElementById('background-music');
 
+
+// Récupérer l'API de FreeCodeCamp
+const getCreature = async () => {
+  try {
+    const creatureNameOrId = searchInput.value.toLowerCase();
+    const response = await fetch(
+      `https://rpg-creature-api.freecodecamp.rocks/api/creature/${creatureNameOrId}`
+    );
+    const data = await response.json();
+
+
+// Toutes les données de la créature
+    creatureName.textContent = `${data.name.toUpperCase()}`;
+    creatureID.textContent = `#${data.id}`;
+    weight.textContent = `Weight: ${data.weight}`;
+    height.textContent = `Height: ${data.height}`;
+    specialName.textContent = data.special.name;
+    specialDescription.textContent = data.special.description;
+
+    hp.textContent = data.stats[0].base_stat;
+    attack.textContent = data.stats[1].base_stat;
+    defense.textContent = data.stats[2].base_stat;
+    specialAttack.textContent = data.stats[3].base_stat;
+    specialDefense.textContent = data.stats[4].base_stat;
+    speed.textContent = data.stats[5].base_stat;
+
+    types.innerHTML = data.types
+      .map(obj => `<span class="type ${obj.name}">${obj.name}</span>`)
+      .join('');
+  } catch (err) {
+    resetDisplay();
+    alert('Creature not found');
+    console.log(`Creature not found: ${err}`);
+  }
+};
+
+searchForm.addEventListener('submit', e => {
+  e.preventDefault();
+  getCreature();
+});
